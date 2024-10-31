@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif !important; 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 1280px){
+  .lH{
+    font-size: 56px;
+    line-height: 64px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .home{
+    background: radial-gradient(11% 56% at 17% 50%, #461518 0%, transparent 100%), radial-gradient(11% 56% at 83% 50%, #461518 0%, transparent 100%);
+  }
+}
+
+.bg-cover{
+  background-image: linear-gradient(7deg, 
+  rgba(0, 0, 0, 0.8500) 10.00%, 
+  rgba(0, 0, 0, 0.8465) 17.25%, 
+  rgba(0, 0, 0, 0.8361) 24.50%, 
+  rgba(0, 0, 0, 0.8187) 31.75%, 
+  rgba(0, 0, 0, 0.7944) 39.00%, 
+  rgba(0, 0, 0, 0.7632) 46.25%, 
+  rgba(0, 0, 0, 0.7250) 53.50%, 
+  rgba(0, 0, 0, 0.6868) 60.75%, 
+  rgba(0, 0, 0, 0.6556) 68.00%, 
+  rgba(0, 0, 0, 0.6312) 75.25%, 
+  rgba(0, 0, 0, 0.6139) 82.50%, 
+  rgba(0, 0, 0, 0.6035) 89.75%, 
+  rgba(0, 0, 0, 0.6000) 97.00%);
+}
+
+.bg-nav {
+  background: linear-gradient(180deg, 
+      rgba(0, 0, 0, 0.8000) 0%, 
+      rgba(0, 0, 0, 0.7889) 8.333%, 
+      rgba(0, 0, 0, 0.7556) 16.67%, 
+      rgba(0, 0, 0, 0.7000) 25%, 
+      rgba(0, 0, 0, 0.6222) 33.33%, 
+      rgba(0, 0, 0, 0.5222) 41.67%, 
+      rgba(0, 0, 0, 0.4000) 50%, 
+      rgba(0, 0, 0, 0.2778) 58.33%, 
+      rgba(0, 0, 0, 0.1778) 66.67%, 
+      rgba(0, 0, 0, 0.1000) 75%, 
+      rgba(0, 0, 0, 0.04444) 83.33%, 
+      rgba(0, 0, 0, 0.01111) 91.67%, 
+      rgba(0, 0, 0, 0.0000) 100%);
+}
+
+.curve{
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.verC1{
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.verC2{
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.gradient-curve{
+  background: linear-gradient(
+    to right,
+   rgba(33, 13, 22, 1) 16%,
+   rgba(184, 40, 105, 1),
+   rgba(229, 9, 20, 1),
+   rgba(184, 40, 105, 1),
+   rgba(33, 13, 22, 1) 84%);
+}
+
+.gradient-radial{
+  background: radial-gradient(
+    50% 500% at 50% -420%, 
+  rgba(64, 97, 231, 0.4) 80%, 
+  rgba(0, 0, 0, 0.1) 100%), 
+  black;
+}
+
+.text-border{
+  -webkit-text-stroke: 1px #fff;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  height: 0px;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.plates-bg{
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #55555500;
+}
