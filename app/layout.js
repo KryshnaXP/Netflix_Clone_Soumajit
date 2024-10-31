@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Montserrat } from 'next/font/google';
-import Head from "next/head";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Specify the font weights you want to include
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased ${montserrat.className}`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
