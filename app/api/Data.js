@@ -12,4 +12,4 @@ export async function fetchContents(Data) {
         console.error('Error fetching contents:', error);
         throw error;
     }
-}
+} 

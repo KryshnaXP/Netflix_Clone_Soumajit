@@ -32,7 +32,7 @@ export default async function PrivacyStatement() {
         </aside>
 
         {/* Scrollable content */}
-        <main className="flex-grow px-8 py-12 ml-16 xmd:ml-0 xmd:pl-48 overflow-y-auto">
+        <main className="flex-grow ms:px-8 py-12 ml-16 xmd:ml-0 xmd:pl-48 overflow-y-auto">
           <div className="text-black space-y-8">
             {overview.map((item, index) => (
               <div key={index}>

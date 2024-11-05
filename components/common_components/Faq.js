@@ -23,7 +23,7 @@ function Faq({ list }) { // Renamed Questions to Faq
                         className='bg-[#323232] h-[72px] px-6 lg:h-[82px] hover:bg-[#454545] transition-all duration-200 flex justify-between items-center cursor-pointer'
                         onClick={() => handleChange(index + 1)} // Toggle FAQ on click
                     >
-                        <h5 className='sm:text-2xl text-xl font-medium'>{item.question}</h5>
+                        <h5 className='sm:text-2xl ms:text-lg text-md font-medium'>{item.question}</h5>
                         <Image src={plus} alt="option" className={`${show === index + 1 ? 'rotate-45' : ''}`} /> {/* Rotate icon based on state */}
                     </div>
 

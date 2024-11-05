@@ -5,7 +5,7 @@ import menu from '@/elememts/menu.svg';
 import Image from 'next/image';
 
 function PrivacyList({ list }) {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(null);
     const [expandedIndex, setExpandedIndex] = useState(null); // Track the expanded section
     const [windowWidth, setWindowWidth] = useState(0); // Initial width from window
 
@@ -47,10 +47,10 @@ function PrivacyList({ list }) {
 
     return (
         <>
-            <div className=' w-16 h-16 bg-gray-100 rounded-lg absolute top-2 left-4 xmd:hidden flex justify-center items-center'
+            <div className='w-10 h-10 ms:w-16 ms:h-16 bg-gray-100 rounded-lg absolute top-2 left-4 xmd:hidden flex justify-center items-center'
                 onClick={() => setShow(!show)}
                 onBlur={() => check()}>
-                <Image src={menu} alt="menu" />
+                <Image src={menu} alt="menu" className='w-6 h-6 ms:w-12 ms:h-12' />
             </div>
             <div className={`max-h-[996px] text-black bg-gray-100 rounded-xl mx-24 my-8 w-48 text-xs ms:text-base ms:w-64 sm:w-80 h-2/3 relative ${show ? null : "hidden"}`}>
                 <ul className='px-6 py-4 h-full overflow-y-scroll custom-scrollbar'>
