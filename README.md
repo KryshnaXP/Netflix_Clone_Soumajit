@@ -101,3 +101,5 @@ This Netflix Clone project has been a valuable learning experience that not only
 
 - Special thanks to [React](https://reactjs.org/) and [Next.js](https://nextjs.org/) for their comprehensive documentation and community support.
 - Inspiration drawn from the Netflix platform and its user experience.
+
+### Build or developed by Soumajit Mandal ( KryshnaXP ) - 2023ETB016
