@@ -26,10 +26,6 @@ function GetStartedBtn({ set }) {
         setCheck(null); // Clear the email state
     }
 
-    // Only render if the component has mounted to avoid hydration issues
-    // if (!isMounted) {
-    //     return null; // or a loading spinner
-    // }
     return (
         <Link
             href={Check == 'true' ? '/sign-up' : '/#'}

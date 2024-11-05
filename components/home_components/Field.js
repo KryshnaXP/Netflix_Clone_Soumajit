@@ -1,5 +1,5 @@
 "use client" // Using Client Side for rendering
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState} from 'react';
 import Image from 'next/image'; // Ensure you have Image component from Next.js
 import cross from '@/elememts/cross.svg' // Importing the cross.svg
 
@@ -21,11 +21,6 @@ function Field(props) {
         return emailPattern.test(email);
     };
 
-    // // Helper function to validate password format
-    // function isValidPassword(password) {
-    //     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    //     return passwordPattern.test(password);
-    // };' : 'Password is required.'
 
     // Function to handle moving the placeholder on focus
     function movePlaceholder() {
