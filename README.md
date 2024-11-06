@@ -57,7 +57,7 @@ The Netflix Clone project is an educational endeavor aimed at mimicking the core
   - Implemented using Next.js to enable seamless navigation between pages without reloading.
 
 - **Dark Mode Support:**
-  - Users can switch between dark and light modes for better accessibility.
+  - Only drak mode is available.
 
 ## Dummy Data and Real Data
 
