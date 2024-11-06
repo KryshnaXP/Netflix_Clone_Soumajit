@@ -9,12 +9,14 @@ import FAQSection from "@/components/common_components/Faq"; // Component to dis
 import Footer from '@/components/common_components/nav_footer/FootBar'; // Footer component for site credits and important links
 import Image from "next/image"; // Image component from Next.js for optimized image loading
 import { fetchContents } from "./api/Data"; // API function to fetch data from the server
+import { unstable_cache } from 'next/cache'; // Importing unstable_cache
 
 export default async function Home() {
 
-  const contents = await fetchContents("Contents"); // Fetching content data
-  const faqData = await fetchContents("FAQData"); // Fetching frequently asked questions data
-  const filter = await fetchContents("Filter"); // Fetching filter options data
+   // Using unstable_cache for cacheable fetching with revalidation
+  const contents = await unstable_cache(() => fetchContents("Contents"), ['contents'], { revalidate: 3600 }); // Fetching content data
+  const faqData = await unstable_cache(() => fetchContents("FAQData"), ['faqData'], { revalidate: 3600 }); // Fetching frequently asked questions data
+  const filter = await unstable_cache(() => fetchContents("Filter"), ['filter'], { revalidate: 3600 }); // Fetching filter options data
 
   return (
     <>
