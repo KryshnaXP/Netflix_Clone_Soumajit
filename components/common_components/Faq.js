@@ -28,7 +28,7 @@ function Faq({ list }) { // Renamed Questions to Faq
                     </div>
 
                     {/* Smooth toggleable answer */}
-                    <div className={`overflow-hidden transition-all duration-300 ease-out mb-6 ${show === index + 1 ? 'max-h-screen' : 'max-h-0'}`}
+                    <div className={`overflow-hidden transition-all duration-300 ease-out mb-6 ${show === index + 1 ? null : 'max-h-0'}`}
                     >
                         <div className='bg-[#323232] text-2xl font-medium p-6 mt-[1px]'>
                             {item.answer.map((para, number) => (
