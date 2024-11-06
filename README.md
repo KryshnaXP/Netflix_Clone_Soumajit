@@ -15,7 +15,7 @@ The Netflix Clone project is an educational endeavor aimed at mimicking the core
 
 - **Backend:**
   - **MongoDB:** For the database, storing user information, content details, and other data.
-  - **Mongoose:** For object modeling and schema management with MongoDB.
+  - **mongodb:** For object modeling and schema management with MongoDB.
 
 - **Others:**
   - **Vercel:** For deploying the application seamlessly.
@@ -62,11 +62,11 @@ The Netflix Clone project is an educational endeavor aimed at mimicking the core
 ## Dummy Data and Real Data
 
 - **Dummy Data:**
-  - The project utilizes dummy data for initial testing and UI development, sourced from a local JSON file in the `database` folder.
+  - The project utilizes dummy data for initial testing and UI development, sourced from mongoDB database.
   - Dummy data includes content titles, images, types, and additional metadata to simulate the user experience.
 
 - **Real Data:**
-  - Plans to integrate a real database (MongoDB) for dynamic content loading, which will allow users to see real-time updates and new releases.
+  - Plans to integrate a real database (MongoDB) for dynamic content loading, which will allow users to see real-time updates and new releases.( if required )
 
 ## Challenges Faced
 
