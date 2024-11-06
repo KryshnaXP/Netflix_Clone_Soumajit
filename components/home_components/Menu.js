@@ -170,12 +170,12 @@ function Menu({Contents, Filter}) {
                 </div>
                 <div
                     onClick={() => scroll('left')}
-                    className='bg-[#30303065] w-12 h-[40%] absolute top-[30%] rounded-l-xl hidden md:flex justify-center items-center'>
+                    className='bg-[#30303065] w-12 h-[40%] absolute top-[30%] rounded-l-xl hidden md:flex justify-center items-center cursor-pointer'>
                     <Image className='invert-[0.3] p-2' src={left} alt="left" /> {/* Left scroll arrow */}
                 </div>
                 <div
                     onClick={() => scroll('right')}
-                    className='bg-[#30303065] w-12 h-[40%] absolute top-[30%] right-0 rounded-r-xl hidden md:flex justify-center items-center'>
+                    className='bg-[#30303065] w-12 h-[40%] absolute top-[30%] right-0 rounded-r-xl hidden md:flex justify-center items-center cursor-pointer'>
                     <Image className='invert-[0.3] p-2' src={right} alt="right" /> {/* Right scroll arrow */}
                 </div>
             </div>
