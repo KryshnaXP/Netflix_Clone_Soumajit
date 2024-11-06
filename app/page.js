@@ -11,12 +11,20 @@ import Image from "next/image"; // Image component from Next.js for optimized im
 import { fetchContents } from "./api/Data"; // API function to fetch data from the server
 import { unstable_cache } from 'next/cache'; // Importing unstable_cache
 
+// Use `unstable_cache` directly in data fetching functions outside of the component
+const fetchContentsData = unstable_cache(
+  async () => ({
+    contents: await fetchContents("Contents"),
+    faqData: await fetchContents("FAQData"),
+    filter: await fetchContents("Filter"),
+  }),
+  ['contents', 'faqData', 'filter'],
+  { revalidate: 3600 }
+);
+
 export default async function Home() {
 
-   // Using unstable_cache for cacheable fetching with revalidation
-  const contents = await unstable_cache(() => fetchContents("Contents"), ['contents'], { revalidate: 3600 }); // Fetching content data
-  const faqData = await unstable_cache(() => fetchContents("FAQData"), ['faqData'], { revalidate: 3600 }); // Fetching frequently asked questions data
-  const filter = await unstable_cache(() => fetchContents("Filter"), ['filter'], { revalidate: 3600 }); // Fetching filter options data
+   const { contents, faqData, filter } = await fetchContentsData();// Fetching content data, frequently asked questions data and filter options data
 
   return (
     <>
